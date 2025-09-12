@@ -72,7 +72,10 @@ export function Navigation() {
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-muted",
-                  pathname === item.href ? "text-primary bg-muted" : "text-muted-foreground hover:text-foreground",
+                  /* Fixed contrast by using white text on primary background for active state */
+                  pathname === item.href
+                    ? "text-primary-foreground bg-primary hover:bg-primary/90"
+                    : "text-foreground/80 hover:text-foreground",
                 )}
               >
                 {item.name}
@@ -107,9 +110,10 @@ export function Navigation() {
                     }}
                     className={cn(
                       "px-4 py-3 rounded-lg text-base font-medium transition-all duration-200",
+                      /* Fixed mobile navigation contrast with primary background for active state */
                       pathname === item.href
-                        ? "text-primary bg-muted"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted",
+                        ? "text-primary-foreground bg-primary hover:bg-primary/90"
+                        : "text-foreground/80 hover:text-foreground hover:bg-muted",
                     )}
                   >
                     {item.name}

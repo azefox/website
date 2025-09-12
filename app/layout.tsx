@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/logo.webp"],
   },
   viewport: "width=device-width, initial-scale=1",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -52,8 +52,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+    <html lang="en" className={`scroll-smooth ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
+      <body className="font-sans">
         <Suspense fallback={<div>Loading...</div>}>
           <Navigation />
           <main className="min-h-screen">{children}</main>
