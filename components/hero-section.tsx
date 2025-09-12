@@ -54,7 +54,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut",
+  ease: "easeOut",
     },
   },
 }
@@ -134,7 +134,7 @@ function HeroSection() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                 className="absolute inset-0 flex flex-col items-center justify-center"
               >
                 <motion.div
@@ -145,7 +145,7 @@ function HeroSection() {
                   }}
                   transition={{
                     rotate: { duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
-                    scale: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                    scale: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: [0.4, 0, 0.2, 1] },
                   }}
                 >
                   {(() => {
