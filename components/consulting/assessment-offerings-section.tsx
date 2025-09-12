@@ -1,7 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Globe, Smartphone, Code, Wifi, Cloud, Server, Cog, Plane } from "lucide-react"
-import Link from "next/link"
 
 const assessmentOfferings = [
   {
@@ -101,19 +100,30 @@ export function AssessmentOfferingsSection() {
                       </li>
                     ))}
                   </ul>
-                  <Link href="/contact">
-                    <Button
+                  <Button
                     variant="outline"
                     size="sm"
                     className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 bg-transparent text-xs"
                   >
                     Get Assessment
                   </Button>
-                  </Link>
                 </CardContent>
               </Card>
             )
           })}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-muted-foreground mb-6">
+            All assessments include detailed reports, remediation guidance, and executive summaries
+          </p>
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-primary text-primary hover:bg-primary hover:text-white bg-transparent"
+          >
+            View Assessment Methodology
+          </Button>
         </div>
       </div>
     </section>

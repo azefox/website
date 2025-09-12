@@ -23,15 +23,3 @@ model Contact {
 
   @@map("contacts")
 }
-
-model Enrollment {
-  id        String   @id @default(cuid())
-  name      String
-  email     String
-  phone     String
-  course    String   // "Web App Penetration Testing" or "CISSP Training"
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("enrollments")
-}

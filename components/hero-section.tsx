@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Shield, BookOpen, Zap } from "lucide-react"
@@ -54,7 +54,7 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-  ease: "easeOut",
+      ease: "easeOut",
     },
   },
 }
@@ -134,7 +134,7 @@ function HeroSection() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0 flex flex-col items-center justify-center"
               >
                 <motion.div
@@ -145,13 +145,10 @@ function HeroSection() {
                   }}
                   transition={{
                     rotate: { duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" },
-                    scale: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: [0.4, 0, 0.2, 1] },
+                    scale: { duration: 2, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
                   }}
                 >
-                  {(() => {
-                    const IconComponent = heroSlides[currentSlide].icon
-                    return IconComponent ? <IconComponent className="w-10 h-10 text-white" /> : null
-                  })()}
+                  {React.createElement(heroSlides[currentSlide].icon, { className: "w-10 h-10 text-white" })}
                 </motion.div>
 
                 <motion.h1

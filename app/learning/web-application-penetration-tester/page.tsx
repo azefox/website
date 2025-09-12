@@ -1,16 +1,11 @@
-"use client"
-
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CheckCircle, Shield, Target, Code, Bug, Award, Users, Clock, BookOpen, Star } from "lucide-react"
 import Image from "next/image"
-import { useEnrollmentContext } from "@/components/enrollment/enrollment-provider"
 
 export default function WAPTCertificationPage() {
-  const { openEnrollment, redirectToContact } = useEnrollmentContext()
-
   return (
     <div className="min-h-screen mt-15 bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -28,11 +23,7 @@ export default function WAPTCertificationPage() {
                 methodologies and hands-on practice.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-red-600 hover:bg-red-700"
-                  onClick={() => openEnrollment("Web App Penetration Testing")}
-                >
+                <Button size="lg" className="bg-red-600 hover:bg-red-700">
                   Enroll Now
                 </Button>
                 <Button size="lg" variant="outline">
@@ -535,11 +526,7 @@ export default function WAPTCertificationPage() {
             program.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100"
-              onClick={() => openEnrollment("Web App Penetration Testing")}
-            >
+            <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
               <Clock className="mr-2 h-5 w-5" />
               Enroll Now - Limited Seats
             </Button>
@@ -547,7 +534,6 @@ export default function WAPTCertificationPage() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600 bg-transparent"
-              onClick={redirectToContact}
             >
               Schedule Free Consultation
             </Button>

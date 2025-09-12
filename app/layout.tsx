@@ -6,7 +6,6 @@ import { Analytics } from "@vercel/analytics/next"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Suspense } from "react"
-import { EnrollmentProvider } from "@/components/enrollment/enrollment-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -44,6 +43,7 @@ export const metadata: Metadata = {
     images: ["/logo.webp"],
   },
   viewport: "width=device-width, initial-scale=1",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -53,18 +53,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="icon" href="/logo.webp" type="image/webp" />
-      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
-        <EnrollmentProvider>
-          <Suspense fallback={<div>Loading..</div>}>
-            <Navigation />
-            <main className="min-h-screen">{children}</main>
-            <Footer />
-            <Analytics />
-          </Suspense>
-        </EnrollmentProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navigation />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   )

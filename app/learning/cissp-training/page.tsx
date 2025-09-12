@@ -1,5 +1,3 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -7,11 +5,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { CheckCircle, Shield, Users, Award, BookOpen, Clock, Star } from "lucide-react"
 import Image from "next/image"
-import { useEnrollmentContext } from "@/components/enrollment/enrollment-provider"
 
 export default function CISSPTrainingPage() {
-  const { openEnrollment, redirectToContact } = useEnrollmentContext()
-
   return (
     <div className="min-h-screen mt-15 bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -20,17 +15,15 @@ export default function CISSPTrainingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="mb-4 bg-blue-100 text-blue-800 hover:bg-blue-200">Professional Certification</Badge>
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance">CISSP Training</h1>
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 text-balance">
+                CISSP Training
+              </h1>
               <p className="text-xl text-gray-600 mb-8 text-pretty">
                 Master cybersecurity leadership with our comprehensive CISSP training program. Join thousands of
                 professionals who have advanced their careers with this globally recognized certification.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-blue-600 hover:bg-blue-700"
-                  onClick={() => openEnrollment("CISSP Training")}
-                >
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                   Enroll Now
                 </Button>
                 <Button variant="outline" size="lg">
@@ -116,20 +109,18 @@ export default function CISSPTrainingPage() {
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Training Benefits</h2>
               <div className="space-y-4">
                 {[
-                  [
-                    "Expert-led instruction from certified professionals",
-                    "Comprehensive study materials and practice exams",
-                    "Flexible learning schedule with online and in-person options",
-                    "Career guidance and job placement assistance",
-                    "Lifetime access to updated course materials",
-                    "Money-back guarantee if you don't pass",
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{benefit}</span>
-                    </div>
-                  )),
-                ]}
+                  "Expert-led instruction from certified professionals",
+                  "Comprehensive study materials and practice exams",
+                  "Flexible learning schedule with online and in-person options",
+                  "Career guidance and job placement assistance",
+                  "Lifetime access to updated course materials",
+                  "Money-back guarantee if you don't pass",
+                ].map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="grid grid-cols-2 gap-6">
@@ -165,22 +156,20 @@ export default function CISSPTrainingPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              [
-                { domain: "Security & Risk Management", icon: Shield },
-                { domain: "Asset Security", icon: Award },
-                { domain: "Security Architecture", icon: BookOpen },
-                { domain: "Communication & Network Security", icon: Users },
-                { domain: "Identity & Access Management", icon: CheckCircle },
-                { domain: "Security Assessment", icon: Star },
-                { domain: "Security Operations", icon: Clock },
-                { domain: "Software Development Security", icon: Shield },
-              ].map((item, index) => (
-                <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
-                  <item.icon className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                  <h3 className="font-semibold text-gray-900 text-sm">{item.domain}</h3>
-                </Card>
-              )),
-            ]}
+              { domain: "Security & Risk Management", icon: Shield },
+              { domain: "Asset Security", icon: Award },
+              { domain: "Security Architecture", icon: BookOpen },
+              { domain: "Communication & Network Security", icon: Users },
+              { domain: "Identity & Access Management", icon: CheckCircle },
+              { domain: "Security Assessment", icon: Star },
+              { domain: "Security Operations", icon: Clock },
+              { domain: "Software Development Security", icon: Shield },
+            ].map((item, index) => (
+              <Card key={index} className="text-center p-6 hover:shadow-lg transition-shadow">
+                <item.icon className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-semibold text-gray-900 text-sm">{item.domain}</h3>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -258,55 +247,53 @@ export default function CISSPTrainingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              [
-                {
-                  name: "Sarah Johnson",
-                  role: "Security Manager at TechCorp",
-                  avatar: "SJ",
-                  rating: 5,
-                  feedback:
-                    "The training was comprehensive and well-structured. I passed the CISSP exam on my first attempt thanks to their excellent preparation materials and expert guidance.",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "IT Director at FinanceSecure",
-                  avatar: "MC",
-                  rating: 5,
-                  feedback:
-                    "Outstanding program! The instructors were knowledgeable and the hands-on labs really helped me understand complex security concepts. Highly recommended.",
-                },
-                {
-                  name: "Emily Rodriguez",
-                  role: "Cybersecurity Consultant",
-                  avatar: "ER",
-                  rating: 5,
-                  feedback:
-                    "This training program exceeded my expectations. The career guidance and job placement assistance helped me land a senior security role with a 40% salary increase.",
-                },
-              ].map((testimonial, index) => (
-                <Card key={index} className="p-6">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-center gap-4">
-                      <Avatar>
-                        <AvatarFallback className="bg-blue-100 text-blue-600">{testimonial.avatar}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                        <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                        <CardDescription>{testimonial.role}</CardDescription>
-                      </div>
+              {
+                name: "Sarah Johnson",
+                role: "Security Manager at TechCorp",
+                avatar: "SJ",
+                rating: 5,
+                feedback:
+                  "The training was comprehensive and well-structured. I passed the CISSP exam on my first attempt thanks to their excellent preparation materials and expert guidance.",
+              },
+              {
+                name: "Michael Chen",
+                role: "IT Director at FinanceSecure",
+                avatar: "MC",
+                rating: 5,
+                feedback:
+                  "Outstanding program! The instructors were knowledgeable and the hands-on labs really helped me understand complex security concepts. Highly recommended.",
+              },
+              {
+                name: "Emily Rodriguez",
+                role: "Cybersecurity Consultant",
+                avatar: "ER",
+                rating: 5,
+                feedback:
+                  "This training program exceeded my expectations. The career guidance and job placement assistance helped me land a senior security role with a 40% salary increase.",
+              },
+            ].map((testimonial, index) => (
+              <Card key={index} className="p-6">
+                <CardHeader className="pb-4">
+                  <div className="flex items-center gap-4">
+                    <Avatar>
+                      <AvatarFallback className="bg-blue-100 text-blue-600">{testimonial.avatar}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+                      <CardDescription>{testimonial.role}</CardDescription>
                     </div>
-                    <div className="flex gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      ))}
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 text-pretty">"{testimonial.feedback}"</p>
-                  </CardContent>
-                </Card>
-              )),
-            ]}
+                  </div>
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 text-pretty">"{testimonial.feedback}"</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -322,18 +309,13 @@ export default function CISSPTrainingPage() {
             leader.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700"
-              onClick={() => openEnrollment("CISSP Training")}
-            >
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               Enroll Today
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
-              onClick={redirectToContact}
             >
               Schedule Consultation
             </Button>

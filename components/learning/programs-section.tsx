@@ -6,8 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { GraduationCap, Globe, Building, Clock, Users } from "lucide-react"
-import { useEnrollmentContext } from "@/components/enrollment/enrollment-provider"
-import Link from "next/link"
 
 const programsData = {
   college: [
@@ -17,12 +15,7 @@ const programsData = {
       duration: "3 weeks",
       students: "500+",
       level: "Beginner",
-      features: [
-        "Understanding Web Technologies",
-        "Input Validation and Injection Attacks\t",
-        "Bug Bounty Techniques and Automation\t",
-        "Hands-on Labs",
-      ],
+      features: ["Understanding Web Technologies", "Input Validation and Injection Attacks\t", "Bug Bounty Techniques and Automation\t", "Hands-on Labs"],
       link: "/learning/web-application-penetration-tester",
     },
   ],
@@ -33,50 +26,33 @@ const programsData = {
       duration: "3 weeks",
       students: "500+",
       level: "Beginner",
-      features: [
-        "Understanding Web Technologies",
-        "Input Validation and Injection Attacks\t",
-        "Bug Bounty Techniques and Automation\t",
-        "Hands-on Labs",
-      ],
+      features: ["Understanding Web Technologies", "Input Validation and Injection Attacks\t", "Bug Bounty Techniques and Automation\t", "Hands-on Labs"],
       link: "/learning/web-application-penetration-tester",
     },
     {
       title: "CISSP Training",
-      description:
-        "Gear up for success with our intensive CISSP Training Bootcamp and become a certified expert in Information Systems Security",
+      description: "Gear up for success with our intensive CISSP Training Bootcamp and become a certified expert in Information Systems Security",
       duration: "2 weeks",
       students: "400+",
       level: "Executive",
-      features: [
-        "Security and Risk Management",
-        "Asset Security",
-        "Security Architecture and Engineering\t",
-        "Identity and Access Management (IAM)",
-      ],
+      features: ["Security and Risk Management", "Asset Security", "Security Architecture and Engineering\t", "Identity and Access Management (IAM)"],
       link: "/learning/cissp-training",
     },
   ],
   corporate: [
     {
       title: "CISSP Training",
-      description:
-        "Gear up for success with our intensive CISSP Training Bootcamp and become a certified expert in Information Systems Security",
+      description: "Gear up for success with our intensive CISSP Training Bootcamp and become a certified expert in Information Systems Security",
       duration: "2 weeks",
       students: "400+",
       level: "Executive",
-      features: [
-        "Security and Risk Management",
-        "Asset Security",
-        "Security Architecture and Engineering\t",
-        "Identity and Access Management (IAM)",
-      ],
+      features: ["Security and Risk Management", "Asset Security", "Security Architecture and Engineering\t", "Identity and Access Management (IAM)"],
       link: "/learning/cissp-training",
     },
   ],
 }
 
-function ProgramsSection() {
+export default function ProgramsSection() {
   const [activeTab, setActiveTab] = useState("college")
   const router = useRouter()
 
@@ -139,11 +115,9 @@ function ProgramsSection() {
                           {program.level}
                         </span>
                       </div>
-                      <Link href="">
                       <CardTitle className="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
                         {program.title}
                       </CardTitle>
-                      </Link>
                       <CardDescription className="text-muted-foreground">{program.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -171,7 +145,7 @@ function ProgramsSection() {
                         className="w-full gradient-primary hover:opacity-90 transition-opacity"
                         onClick={() => router.push(program.link)}
                       >
-                        Learn More
+                        Enroll Now
                       </Button>
                     </CardContent>
                   </Card>
@@ -184,5 +158,3 @@ function ProgramsSection() {
     </section>
   )
 }
-
-export default ProgramsSection
