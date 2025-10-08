@@ -15,7 +15,6 @@ const navigationItems = [
   { name: "IT Consulting", href: "/consulting" },
   { name: "Market Insights", href: "/insights" },
   { name: "Platform Impact", href: "/impact" },
-  { name: "Our Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ]
 

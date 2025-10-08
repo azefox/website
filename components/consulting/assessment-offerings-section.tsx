@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Globe, Smartphone, Code, Wifi, Cloud, Server, Cog, Plane } from "lucide-react"
+import Link from "next/link"
 
 const assessmentOfferings = [
   {
@@ -105,7 +106,9 @@ export function AssessmentOfferingsSection() {
                     size="sm"
                     className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 bg-transparent text-xs"
                   >
+                    <Link href="/contact">
                     Get Assessment
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>

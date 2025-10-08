@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Shield, Monitor, Zap, AlertTriangle, Search, Bug } from "lucide-react"
+import Link from "next/link"
 
 const managedServices = [
   {
@@ -146,7 +147,7 @@ export function ManagedServicesSection() {
                         </div>
 
                         <Button className="w-full gradient-primary hover:opacity-90 transition-opacity">
-                          Get Started
+                          <Link href="/contact">Get Started</Link>
                         </Button>
                       </CardContent>
                     </Card>
@@ -192,18 +193,6 @@ export function ManagedServicesSection() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
-            All managed services include SLA guarantees, regular reporting, and dedicated support teams
-          </p>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-white bg-transparent"
-          >
-            View Service Level Agreements
-          </Button>
-        </div>
       </div>
     </section>
   )

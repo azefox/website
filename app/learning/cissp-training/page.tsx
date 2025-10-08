@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { CheckCircle, Shield, Users, Award, BookOpen, Clock, Star } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function CISSPTrainingPage() {
   return (
@@ -24,10 +25,7 @@ export default function CISSPTrainingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  Enroll Now
-                </Button>
-                <Button variant="outline" size="lg">
-                  Download Syllabus
+                  <Link target="_blank" href="https://academy.azefox.com/">Enroll Now</Link>
                 </Button>
               </div>
             </div>
@@ -310,14 +308,14 @@ export default function CISSPTrainingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              Enroll Today
+              <Link target="_blank" href="https://academy.azefox.com/">Enroll Now</Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="border-gray-600 text-gray-300 hover:bg-gray-800 bg-transparent"
             >
-              Schedule Consultation
+              <Link href="/contact">Schedule Consultation</Link>
             </Button>
           </div>
         </div>

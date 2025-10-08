@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CheckCircle, Shield, Target, Code, Bug, Award, Users, Clock, BookOpen, Star } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function WAPTCertificationPage() {
   return (
@@ -24,10 +25,7 @@ export default function WAPTCertificationPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700">
-                  Enroll Now
-                </Button>
-                <Button size="lg" variant="outline">
-                  Download Syllabus
+                  <Link target="_blank" href="https://academy.azefox.com/">Enroll Now</Link>
                 </Button>
               </div>
             </div>
@@ -528,14 +526,14 @@ export default function WAPTCertificationPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
               <Clock className="mr-2 h-5 w-5" />
-              Enroll Now - Limited Seats
+              <Link target="_blank" href="https://academy.azefox.com/">Enroll Now - Limited Seats</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600 bg-transparent"
             >
-              Schedule Free Consultation
+              <Link href="/contact">Schedule Free Consultation</Link>
             </Button>
           </div>
           <p className="text-red-200 mt-4 text-sm">

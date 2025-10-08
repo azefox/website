@@ -185,11 +185,6 @@ export function CaseStudiesSection() {
                         </div>
                       </div>
 
-                      <div className="mt-8 pt-6 border-t border-border">
-                        <Button className="gradient-primary hover:opacity-90 transition-opacity">
-                          Read Full Case Study
-                        </Button>
-                      </div>
                     </CardContent>
                   </Card>
                 </div>
@@ -231,19 +226,6 @@ export function CaseStudiesSection() {
               />
             ))}
           </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
-            Join hundreds of organizations that have transformed their security posture with our expertise
-          </p>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-white bg-transparent"
-          >
-            View All Case Studies
-          </Button>
         </div>
       </div>
     </section>

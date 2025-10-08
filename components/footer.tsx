@@ -1,8 +1,6 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter, Youtube, Facebook, ArrowRight } from "lucide-react"
+import { Shield, Mail, Phone, MapPin, Linkedin, Youtube } from "lucide-react"
 
 const footerLinks = {
   company: [
@@ -60,11 +58,11 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-9789892726</span>
               </div>
               <div className="flex items-center gap-3 text-slate-300">
                 <MapPin className="h-4 w-4 text-accent" />
-                <span>Global Offices in NY, SF, London, Singapore</span>
+                <span>Azefox Innovation V.O.C Street,Kottivakkam, OMR, Chennai - 600041</span>
               </div>
             </div>
           </div>
@@ -131,32 +129,18 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.linkedin.com/company/azefox"
               className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-4 w-4 text-slate-300 hover:text-white" />
             </a>
             <a
-              href="#"
-              className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="h-4 w-4 text-slate-300 hover:text-white" />
-            </a>
-            <a
-              href="#"
+              href="https://www.youtube.com/@azefoxinnovations_official/videos"
               className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
               aria-label="YouTube"
             >
               <Youtube className="h-4 w-4 text-slate-300 hover:text-white" />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-slate-800 rounded-lg hover:bg-slate-700 transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="h-4 w-4 text-slate-300 hover:text-white" />
             </a>
           </div>
         </div>

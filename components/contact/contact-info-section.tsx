@@ -5,14 +5,14 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone Support",
-    details: ["+1 (555) 123-4567", "+1 (555) 123-4568"],
+    details: ["+91-9789892726"],
     description: "Monday - Friday, 9 AM - 6 PM EST",
     color: "text-primary",
   },
   {
     icon: Mail,
     title: "Email Support",
-    details: ["info@azefox.com", "support@azefox.com"],
+    details: ["info@azefox.com"],
     description: "Response within 2 hours",
     color: "text-secondary",
   },
@@ -23,21 +23,9 @@ const contactMethods = [
     description: "Instant responses",
     color: "text-accent",
   },
-  {
-    icon: Headphones,
-    title: "Emergency Support",
-    details: ["+1 (555) 911-HELP", "24/7 Incident Response"],
-    description: "For security incidents",
-    color: "text-red-600",
-  },
 ]
 
 const departments = [
-  {
-    department: "Sales & Partnerships",
-    email: "sales@azefox.com",
-    description: "New business inquiries and partnerships",
-  },
   {
     department: "Training & Education",
     email: "training@azefox.com",
@@ -45,13 +33,8 @@ const departments = [
   },
   {
     department: "Consulting Services",
-    email: "consulting@azefox.com",
+    email: "info@azefox.com",
     description: "Security consulting and assessments",
-  },
-  {
-    department: "Technical Support",
-    email: "support@azefox.com",
-    description: "Platform and technical assistance",
   },
 ]
 

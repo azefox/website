@@ -53,7 +53,6 @@ export default function PlatformImpactPage() {
         <GlobalReachSection />
         <SuccessMetricsSection />
         <TestimonialsSection />
-        <RoiSection />
       </main>
     </>
   )

@@ -3,33 +3,13 @@ import { MapPin, Clock, Phone } from "lucide-react"
 
 const offices = [
   {
-    city: "New York",
-    address: "123 Security Plaza, Suite 500\nNew York, NY 10001",
-    phone: "+1 (555) 123-4567",
+    city: "Chennai, India",
+    address: "Azefox Innovations V.O.C Street,Kottivakkam OMR Chennai 600041",
+    phone: "+91-9789892726",
     hours: "Mon-Fri: 9 AM - 6 PM EST",
-    timezone: "Eastern Time",
+    timezone: "Indian Time",
   },
-  {
-    city: "San Francisco",
-    address: "456 Innovation Drive, Floor 12\nSan Francisco, CA 94105",
-    phone: "+1 (555) 987-6543",
-    hours: "Mon-Fri: 9 AM - 6 PM PST",
-    timezone: "Pacific Time",
-  },
-  {
-    city: "London",
-    address: "789 Cyber Street, Level 8\nLondon, UK EC2A 4DP",
-    phone: "+44 20 1234 5678",
-    hours: "Mon-Fri: 9 AM - 5 PM GMT",
-    timezone: "Greenwich Mean Time",
-  },
-  {
-    city: "Singapore",
-    address: "321 Tech Hub, Tower B, #15-01\nSingapore 018989",
-    phone: "+65 6123 4567",
-    hours: "Mon-Fri: 9 AM - 6 PM SGT",
-    timezone: "Singapore Time",
-  },
+
 ]
 
 export function OfficeLocationsSection() {

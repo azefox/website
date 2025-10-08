@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Award, Shield, Globe, Lock, Cloud } from "lucide-react"
+import Link from "next/link"
 
 const certifications = [
   {
@@ -102,25 +103,15 @@ export function CertificationSection() {
                     <div className="font-semibold text-foreground">{cert.recognition}</div>
                   </div>
 
-                  <Button className="w-full gradient-primary hover:opacity-90 transition-opacity">Get Certified</Button>
+                  <Button className="w-full gradient-primary hover:opacity-90 transition-opacity">
+                    <Link href="/contact">Get Certified</Link>
+                  </Button>
                 </CardContent>
               </Card>
             )
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
-            All certifications include comprehensive study materials, practice exams, and expert support
-          </p>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-primary text-primary hover:bg-primary hover:text-white bg-transparent"
-          >
-            View All Certifications
-          </Button>
-        </div>
       </div>
     </section>
   )

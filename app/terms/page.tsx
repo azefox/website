@@ -79,8 +79,8 @@ export default function TermsPage() {
               including our cybersecurity training platform and consulting services.
             </p>
             <div className="text-sm text-muted-foreground">
-              <p>Last updated: December 2024</p>
-              <p>Effective date: January 1, 2024</p>
+              <p>Last updated: December 2025</p>
+              <p>Effective date: January 1, 2025</p>
             </div>
           </div>
 
