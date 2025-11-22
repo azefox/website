@@ -526,7 +526,7 @@ export default function WAPTCertificationPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
               <Clock className="mr-2 h-5 w-5" />
-              <Link target="_blank" href="https://academy.azefox.com/">Enroll Now - Limited Seats</Link>
+              <Link target="_blank" href="https://academy.azefox.com/courses/ACWAPT-67e3f5de7877b84d88b8e40f/">Enroll Now - Limited Seats</Link>
             </Button>
             <Button
               size="lg"

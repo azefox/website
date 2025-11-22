@@ -25,7 +25,7 @@ export default function CISSPTrainingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Link target="_blank" href="https://academy.azefox.com/">Enroll Now</Link>
+                  <Link target="_blank" href="https://academy.azefox.com/courses/Certified-Information-Systems-Security-Professional-CISSP-Training-689a03952fa0742b9a9e8776">Enroll Now</Link>
                 </Button>
               </div>
             </div>
