@@ -64,7 +64,7 @@ export function Footer() {
               <div className="flex items-center gap-3 text-slate-300">
                 <MapPin className="h-4 w-4 text-accent" />
                 <span>Azefox Innovation V.O.C Street,Kottivakkam, OMR, Chennai - 600041</span>
-              </div>
+              </div>ko
             </div>
           </div>
 

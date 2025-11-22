@@ -25,7 +25,7 @@ export default function WAPTCertificationPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-red-600 hover:bg-red-700">
-                  <Link target="_blank" href="https://academy.azefox.com/">Enroll Now</Link>
+                  <Link target="_blank" href="https://academy.azefox.com/courses/ACWAPT-67e3f5de7877b84d88b8e40f">Enroll Now</Link>
                 </Button>
               </div>
             </div>

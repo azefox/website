@@ -104,7 +104,7 @@ export function CertificationSection() {
                   </div>
 
                   <Button className="w-full gradient-primary hover:opacity-90 transition-opacity">
-                    <Link href="/contact">Get Certified</Link>
+                    <Link href="https://academy.azefox.com/s/store/courses">Get Certified</Link>
                   </Button>
                 </CardContent>
               </Card>
