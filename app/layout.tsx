@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/logo.webp"],
   },
   viewport: "width=device-width, initial-scale=1",
-  generator: "v0.app",
+  generator: "Sivasankar",
 }
 
 export default function RootLayout({
